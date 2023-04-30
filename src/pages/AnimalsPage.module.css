@@ -1,0 +1,10 @@
+.animals-page {
+    width: 100%
+}
+
+.filter-display {
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    width: 100%;
+}

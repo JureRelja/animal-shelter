@@ -1,0 +1,30 @@
+.new-news-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.new-news-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.new-news-form p{
+    font-weight: 600;
+    color: #F45050;
+    text-align: center;
+    width: 100%;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    row-gap: 10px;
+}

@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}   
+
+.container h3 {
+    text-decoration: underline;
+}
+
+.donation-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.donation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}   
+
+.donation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 25%;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 50%
+}
+
+.variant {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 25%
+}
+
+.button {
+    width: 25%;
+}
+
+.properties {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.red {
+    background-color: #FCC8D1;
+}
+
+.green {
+    background-color: #81ffd5;
+}
+
+.yellow {
+    background-color: #f8cc6c;
+}

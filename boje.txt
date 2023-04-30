@@ -1,0 +1,15 @@
+rgb(25,118,210) - tamno plava
+
+rgb(137,181,222) - malo svijetlija plava
+
+#654E92 - ljubicasta
+
+#6C9BCF - svijetlo plava
+
+#F0A500 - žuta
+
+#03C988 - zelena
+
+#FCC8D1 - svijetlo crvena
+
+#F45050 - tamnija crvena

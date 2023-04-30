@@ -1,0 +1,57 @@
+.animal {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 220px;
+    height: 500px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.adopted {
+    background-color: #7cf2cb;
+}
+
+.not-adopted {
+    background-color: #FCC8D1;
+}
+
+.animal img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.name-description {
+    width: 100%;
+} 
+
+.name-description h2 {
+    border-bottom: #000000 2px solid;
+    width: 100%;
+}
+
+.properties {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 20px;
+}
+

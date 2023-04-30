@@ -1,0 +1,27 @@
+.new-donation-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.donation-form  {
+    text-align: center;
+}
+
+
+.donation-form p {
+    font-weight: 600;
+    color: #F45050;
+    text-align: center;
+    width: 100%;
+}
+
+.donation-form__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}

@@ -1,0 +1,52 @@
+
+.container {
+    width: 55%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.field input {
+    padding: 0.5rem;
+    border: 1px solid #b4b4b46f;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f9f7f7;
+    color: #000;
+}
+
+.field textarea {
+    padding: 0.5rem;
+    border: 1px solid #b4b4b46f;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f9f7f7;
+    color: #000;
+}
+
+.field label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.error {
+    color: #CF0A0A;
+    font-size: 0.8rem;
+
+}
+
