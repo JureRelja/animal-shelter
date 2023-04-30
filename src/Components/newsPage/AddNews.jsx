@@ -44,7 +44,7 @@ function AddNews(props) {
     setShowErrorTitle(false);
     setShowErrorDescription(false);
     const news = {
-      date: new Date().toISOString().split("T")[0], // Today's date
+      date: new Date().toISOString(), // Today's date
       title,
       text: description,
       important,
@@ -97,13 +97,17 @@ function AddNews(props) {
                 variant="standard"
                 fullWidth
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
               />
               <FormControlLabel
                 control={
                   <Checkbox
                     value={important}
-                    onChange={(e) => setImportant(e.target.value)}
+                    onChange={(e) =>
+                      setImportant((currentState) => !currentState)
+                    }
                   />
                 }
                 sx={{ width: "100%" }}

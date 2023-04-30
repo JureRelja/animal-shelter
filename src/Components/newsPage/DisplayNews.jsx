@@ -5,7 +5,7 @@ import { UserStatusContext } from "../../store/UserStatusProvider";
 
 function DisplayNews(props) {
   const sortedNews = [...props.news].sort((a, b) => {
-    return b.date - a.date;
+    return new Date(b.date) - new Date(a.date);
   });
 
   const ctx = useContext(UserStatusContext);
@@ -22,12 +22,12 @@ function DisplayNews(props) {
             <div className={importantClass}>
               <h2>{news.title}</h2>
               <p>VAŽNO!</p>
-              <p>{news.date}</p>
+              <p>{news.date.split("T")[0]}</p>
             </div>
           ) : (
             <div className={notImportantClass}>
               <h2>{news.title}</h2>
-              <p>{news.date}</p>
+              <p>{news.date.split("T")[0]}</p>
             </div>
           )}
           <p className={classes.description}>{news.text}</p>
