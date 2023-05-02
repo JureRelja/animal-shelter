@@ -16,32 +16,38 @@ function DisplayNews(props) {
 
   return (
     <div className={classes["news-container"]}>
-      {sortedNews.map((news) => (
-        <div key={news.id} className={classes["news-item"]}>
-          {news.important ? (
-            <div className={importantClass}>
-              <h2>{news.title}</h2>
-              <p>VAŽNO!</p>
-              <p>{news.date.split("T")[0]}</p>
+      {props.news.length === 0 ? (
+        <h1>Učitavanje...</h1>
+      ) : (
+        <>
+          {sortedNews.map((news) => (
+            <div key={news.id} className={classes["news-item"]}>
+              {news.important ? (
+                <div className={importantClass}>
+                  <h2>{news.title}</h2>
+                  <p>VAŽNO!</p>
+                  <p>{news.date.split("T")[0]}</p>
+                </div>
+              ) : (
+                <div className={notImportantClass}>
+                  <h2>{news.title}</h2>
+                  <p>{news.date.split("T")[0]}</p>
+                </div>
+              )}
+              <p className={classes.description}>{news.text}</p>
+              <div className={classes["delete-button"]}>
+                {ctx.userStatus === "admin" && (
+                  <Button
+                    label="Obriši"
+                    onClick={() => props.deleteNews(news.id)}
+                    type="red"
+                  />
+                )}
+              </div>
             </div>
-          ) : (
-            <div className={notImportantClass}>
-              <h2>{news.title}</h2>
-              <p>{news.date.split("T")[0]}</p>
-            </div>
-          )}
-          <p className={classes.description}>{news.text}</p>
-          <div className={classes["delete-button"]}>
-            {ctx.userStatus === "admin" && (
-              <Button
-                label="Obriši"
-                onClick={() => props.deleteNews(news.id)}
-                type="red"
-              />
-            )}
-          </div>
-        </div>
-      ))}
+          ))}
+        </>
+      )}
     </div>
   );
 }

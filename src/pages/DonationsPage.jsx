@@ -56,7 +56,6 @@ function DonationsPage() {
         `https://animal-shelter-c9a31-default-rtdb.europe-west1.firebasedatabase.app/donations.json`,
         reListDonation
       );
-      console.log(response.data.name);
       setDonations((currentState) => [
         ...currentState,
         { ...reListDonation, id: response.data.name },

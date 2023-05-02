@@ -7,16 +7,15 @@ function ImageInput(props) {
   const checkImage = async (image) => {
     try {
       const response = await axios.get(image);
-      console.log(response.status);
       return true;
     } catch (error) {
-      console.log(error);
       return false;
     }
   };
 
   const setImage = async (link) => {
     const result = await checkImage(link);
+    console.log(result);
     if (result) {
       props.setDisplayImageLink(link);
       return;

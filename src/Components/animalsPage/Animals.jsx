@@ -81,18 +81,25 @@ function Animals(props) {
 
   return (
     <div className={classes["animals"]}>
-      {animals.map((animal) =>
-        (filteredByStatus === null || filteredByStatus === animal.adopted) &&
-        (props.typeFilter === "all" || props.typeFilter === animal.type) &&
-        (searchFilter === "all" ||
-          searchFilter === animal.name.toLowerCase()) ? (
-          <Animal
-            key={animal.id}
-            animal={animal}
-            adopt={adoptHandler}
-            updateAnimal={updateAnimalHandler}
-          />
-        ) : null
+      {animals.length === 0 ? (
+        <h1>Učitavanje...</h1>
+      ) : (
+        <>
+          {animals.map((animal) =>
+            (filteredByStatus === null ||
+              filteredByStatus === animal.adopted) &&
+            (props.typeFilter === "all" || props.typeFilter === animal.type) &&
+            (searchFilter === "all" ||
+              searchFilter === animal.name.toLowerCase()) ? (
+              <Animal
+                key={animal.id}
+                animal={animal}
+                adopt={adoptHandler}
+                updateAnimal={updateAnimalHandler}
+              />
+            ) : null
+          )}
+        </>
       )}
     </div>
   );
