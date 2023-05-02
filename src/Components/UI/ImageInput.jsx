@@ -4,18 +4,12 @@ import TextField from "@mui/material/TextField";
 import axios from "axios";
 
 function ImageInput(props) {
-  const checkImage = async (image) => {
-    try {
-      const response = await axios.get(image);
-      return true;
-    } catch (error) {
-      return false;
-    }
+  const checkImage = (image) => {
+    return /\.(jpg|jpeg|png|webp|avif|gif|svg)$/.test(image);
   };
 
-  const setImage = async (link) => {
-    const result = await checkImage(link);
-    console.log(result);
+  const setImage = (link) => {
+    const result = checkImage(link);
     if (result) {
       props.setDisplayImageLink(link);
       return;

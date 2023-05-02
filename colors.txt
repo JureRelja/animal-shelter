@@ -1,0 +1,9 @@
+#6C9BCF - light blue
+
+#F0A500 - yellow
+
+#03C988 - green
+
+#FCC8D1 - light red
+
+#F45050 - dark red
